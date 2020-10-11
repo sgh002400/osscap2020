@@ -1,1 +1,1 @@
-print("신지환 commit");
+print("main2에서 작업함.");
