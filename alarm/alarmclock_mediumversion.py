@@ -3,6 +3,7 @@ import pygame
 import time
 import os
 import math
+import OpenCV
 from datetime import datetime
 from time import sleep
 
@@ -11,6 +12,7 @@ pygame.mixer.init()
 audio_volume = 0.5 #default audio volume
 sound = pygame.mixer.Sound('alarm.wav')
 
+names = ['None', 'Jihwan', 'Jiho', 'Myungjin']
 
 MusicList = { 
             1: ('Alarm signal', 'alarm.wav'), 
@@ -65,10 +67,11 @@ def SelectAlarmTime():
 
     if ahour < 10:
         ahour = "0" + str(ahour)
+
     if aminute < 10:
         aminute = "0" + str(aminute)
 
-    atime = "%s:%s %s" % (ahour, aminute, ap)
+    atime = "%s:%s%s"%(ahour,aminute,ap)
     print("Alarm at {}".format(atime))
     return atime
 
@@ -85,12 +88,17 @@ def Alarm(alarm_time):
         else:
             pa = "AM"
             
-        real_time = "%s:%s %s" % (hour, minute, pa)
+        real_time = "%s:%s %s"  %(hour,minute, pa)
 
         if (alarm_time == real_time and second == 0):
             print("WAKE UP")
             while True:
                 sound.play()
+                a = face_recognition()
+
+                for i in names():
+                    if a == names:
+                        break
                 time.sleep(4)
 
 #실행 부분
