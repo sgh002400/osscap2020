@@ -8,9 +8,9 @@
 3. 02_face_training.py로 위 이미지를 학습시킨다. 
 4. alarmclock_mediumversion.py에선 알람시계기능과 LED Matrix에UI를 띄우는 역할을 한다. 이후 알람시간이 되면 얼굴이 인식된 후 ESC를 누를때 까지 알람이 안꺼지게 만들었다.
 
-### Installing / 설치
+### Installing / 설치, 사용
 
-아래 사항들이 설치가 되어있어야합니다.
+아래 사항들이 설치, 사용 되었습니다.
 - Open CV
 - Python3
 - Pygame
