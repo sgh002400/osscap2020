@@ -3,7 +3,10 @@
 현대인은 시간이 중요합니다. 효율적인 시간을 사용하기 위해 생활패턴 조절이 필수적이라는걸 알게되었다. 일반적인 알람은 눌러서 끄는게 대부분이기에 사용자가 잠에서 확실히 깨어나지 못하는 경우가 많다. 간편하게 알람을 끄는 방식의 단점을 생각하여 스마트 알람을 구상하게되었다.
 
 - 간단한 실행 안내
-프로그램 실행 순서는 01_face_dataset.py, 02_face_training.py, alarmclock_mediumversion.py를 순서대로 실행시킨다. 01_face_dataset.py로 대상의 이름과 얼굴 img를 저장한다. 02_face_training.py로 위 이미지를 학습시킨다. alarmclock_mediumversion.py에선 알람시계기능과 LED Matrix에UI를 띄우는 역할을 한다. 이후 알람시간이 되면 얼굴이 인식된 후 ESC를 누를때 까지 알람이 안꺼지게 만들었다.
+1. 프로그램 실행 순서는 01_face_dataset.py, 02_face_training.py, alarmclock_mediumversion.py를 순서대로 실행시켜야한다. 
+2. 01_face_dataset.py로 대상의 이름과 얼굴 img를 저장한다.
+3. 02_face_training.py로 위 이미지를 학습시킨다. 
+4. alarmclock_mediumversion.py에선 알람시계기능과 LED Matrix에UI를 띄우는 역할을 한다. 이후 알람시간이 되면 얼굴이 인식된 후 ESC를 누를때 까지 알람이 안꺼지게 만들었다.
 
 ### Installing / 설치
 
