@@ -14,7 +14,6 @@
 - Open CV
 - Python3
 - Pygame
-- opencv-contrib-python
 - opencv-python
 - Numpy
 - os
