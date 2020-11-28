@@ -4,7 +4,7 @@
 
 #### 간단한 실행 안내
 1. 프로그램 실행 순서는 01_face_dataset.py, 02_face_training.py, alarmclock_mediumversion.py를 순서대로 실행시켜야한다. 
-2. 01_face_dataset.py로 대상의 이름과 얼굴 img를 저장한다.
+2. 01_face_dataset.py로 id를 입력한 뒤 카메라를 응시하여 얼굴 데이터를 저장한다.
 3. 02_face_training.py로 위 이미지를 학습시킨다. 
 4. alarmclock_mediumversion.py에선 알람시계기능과 LED Matrix에 UI를 띄우는 역할을 한다. 이후 알람시간이 되면 얼굴이 인식된 후 ESC를 누를때 까지 알람이 안꺼지게 만들었다.
 
