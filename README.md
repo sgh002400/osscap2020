@@ -17,10 +17,16 @@
 - opencv-python
 - Numpy
 - os
+- Pi-camera
+- 3.5mm speaker
 
 
 ### Running the tests / 테스트의 실행
 -구체적인 실행 안내
+
+- $sudo raspi-config
+1. System Options -> S2 Audio -> 1 Headphones
+> 외장 스피커를 사용하므로 raspi 초기설정을 위와 같이 해줘야한다.
 
 - $git clone https://github.com/sgh002400/osscap2020.git
 
