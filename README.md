@@ -3,10 +3,10 @@
 
 
 #### 간단한 실행 안내
-1. 프로그램 실행 순서는 01_face_dataset.py, 02_face_training.py, alarmclock_forLED.py를 순서대로 실행시켜야한다. 
+1. 프로그램 실행 순서는 01_face_dataset.py, 02_face_training.py, SmartAlarmLED.py를 순서대로 실행시켜야한다. 
 2. 01_face_dataset.py로 id를 입력한 뒤 카메라를 응시하여 얼굴 데이터를 저장한다.
 3. 02_face_training.py로 위 이미지를 학습시킨다. 
-4. alarmclock_forLED.py에선 알람시계기능과 LED Matrix에 UI를 띄우는 역할을 한다. 이후 알람시간이 되면 얼굴이 인식된 후 ESC를 누를때까지 알람이 울리게 만들었다.
+4. SmartAlarmLED.py에선 알람시계기능과 LED Matrix에 UI를 띄우는 역할을 한다. 이후 알람시간이 되면 얼굴이 인식된 후 ESC를 누를때까지 알람이 울리게 만들었다.
 
 ### Installing / 설치, 사용
 
@@ -27,13 +27,13 @@
 - $cd final
 
 - $python3 01_face_dataset.py
-> 01_face_dataset.py를 실행시켜서 id를 입력한다. 김강희 교수님은 3번, 주영 조교님은 4번, 길진 조교님은 5번이다. 숫자를 입력하고 카메라에 얼굴을 대고있으면 OpenCV의 haarcascades가 카메라를 통해 사용자 얼굴을 인식하여 img파일로 저장한다. 이때 카메라 화면은 뜨지 않으며 얼굴이 인식되어 저장된 이미지만 뜨게된다. 이 이미지를 통해 학습시켜야 하므로 우리는 30장을 저장시킵니다.
+> 01_face_dataset.py를 실행시켜서 id를 입력한다. 김강희 교수님은 3번, 주영 조교님은 4번, 길진 조교님은 5번입니다. 숫자 id를 입력하고 카메라에 얼굴을 대고있으면 OpenCV의 haarcascades가 카메라를 통해 사용자 얼굴을 인식하여 img파일로 저장한다. 이때 카메라 화면은 뜨지 않으며 얼굴이 인식되어 저장된 이미지만 뜨게된다. 이 이미지를 통해 학습시켜야 하므로 우리는 30장을 저장시킵니다.
 
 - $python3 02_face_training.py
 > 02_face_training.py를 실행시키면 이미지 파일들을 불러와서 이를 recognizer.train()을 통해 학습시킨 후 결과를 recognizer.write()을 통해 trainer.yml 파일로 저장시킨다.
 
-- $python3 alarmclock_forLED.py
-> alarmclock_forLED.py을 실행시키면 LED matrix에 UI가 나오게 되며 번호를 통해 원하는 설정을 고를 수 있다. 1.알람시간설정, 2.알람노래설정, 3.볼륨크기설정, 4.종료로 되어있다.
+- $python3 SmartAlarmLED.py
+> SmartAlarmLED.py을 실행시키면 LED matrix에 UI가 나오게 되며 번호를 통해 원하는 설정을 고를 수 있다. 1.알람시간설정, 2.알람노래설정, 3.볼륨크기설정, 4.종료로 되어있다.
 
 >   > 1 - 1. 알람시간을 선택하면 사용자의 이름을 입력받고 알람이 울릴 시간, 분을 입력한다. 이때 시간은 24, 분은 60 이상의 수를 넣으면 다시 입력한다. 그 후 time 모듈을 통해 현재시간을 가져온 후 설정한 시간과의 차이를 초로 바꾸어 time.sleep으로 설정시간때까지 기다린다. 이떄 설정한 시간은 LED matrix에서 ALARM 옆에 띄워진다.
 
