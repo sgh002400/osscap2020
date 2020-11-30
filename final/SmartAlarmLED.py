@@ -117,8 +117,9 @@ draw_matrix(oScreen); print()
 ###
 
 pygame.mixer.init()
-audio_volume = 0.5 #default audio volume
 sound = pygame.mixer.Sound('alarm.wav') #default audio sound
+audio_volume = 0.5 #default audio volume
+sound.set_volume(audio_volume)
 
 UserNameList = ("Myungjin", "Jiho", "Professor", "Juhyung", "Giljin") # Alarm Users
 SoundList = {                                                         # Alarm Sound
@@ -148,6 +149,7 @@ def SelectSound():
 
 def SelectVolume():
     global sound
+    global audio_volume
     while True:
         audio_volume = int(input("Please enter the size of the alarm(0~10 int): "))
         if 0 <= audio_volume <=10:
