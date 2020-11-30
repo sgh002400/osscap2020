@@ -28,6 +28,9 @@
 1. System Options -> S2 Audio -> 1 Headphones
 > 외장 스피커를 사용하므로 raspi 초기설정을 위와 같이 해줘야한다.
 
+2. Camera -> enabled
+> 카메라 연결하는 것부터 찍기 시작한다. 첫번째는 잘 작동되지만, 두번째 시도 떄 Assertion failed 오류가 뜬다면 sudo modprobe bcm2835-v4l2를 입력하고, sudo nano /etc/modules를 입력한 후 맨 마지막 줄에 bcm2835-v4l2를 입력한 후 저장한다.
+
 - $git clone https://github.com/sgh002400/osscap2020.git
 
 - $cd osscap2020
