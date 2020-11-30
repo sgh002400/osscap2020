@@ -33,7 +33,7 @@
 > 02_face_training.py를 실행시키면 이미지 파일들을 불러와서 이를 recognizer.train()을 통해 학습시킨 후 결과를 recognizer.write()을 통해 trainer.yml 파일로 저장시킨다.
 
 - $python3 alarmclock_forLED.py
-> alarmclock_mediumversion.py을 실행시키면 LED matrix에 UI가 나오게 되며 번호를 통해 원하는 설정을 고를 수 있다. 1.알람시간설정, 2.알람노래설정, 3.볼륨크기설정, 4.종료로 되어있다.
+> alarmclock_forLED.py을 실행시키면 LED matrix에 UI가 나오게 되며 번호를 통해 원하는 설정을 고를 수 있다. 1.알람시간설정, 2.알람노래설정, 3.볼륨크기설정, 4.종료로 되어있다.
 
 >   > 1 - 1. 알람시간을 선택하면 사용자의 이름을 입력받고 알람이 울릴 시간, 분을 입력한다. 이때 시간은 24, 분은 60 이상의 수를 넣으면 다시 입력한다. 그 후 time 모듈을 통해 현재시간을 가져온 후 설정한 시간과의 차이를 초로 바꾸어 time.sleep으로 설정시간때까지 기다린다. 이떄 설정한 시간은 LED matrix에서 ALARM 옆에 띄워진다.
 
