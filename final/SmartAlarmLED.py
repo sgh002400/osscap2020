@@ -130,7 +130,7 @@ SoundList = {                                                         # Alarm So
 def SelectSound():
     global sound
     while True: 
-        print("1. Alarm signal\n2. Campfire\n3. Boiling water")
+        print("1. Alarm signal\n2. Campfire\n3. K-POP")
         audio_sound = int(input("Select the alarm sound(1~3): "))
         if 1 <= audio_sound <= 3:
             sound = pygame.mixer.Sound(SoundList[audio_sound][1])
