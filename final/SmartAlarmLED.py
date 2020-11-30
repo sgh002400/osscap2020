@@ -246,10 +246,11 @@ def Alarm():
         return_name = face_recognition() 
         if user_name == return_name:
             print("%s, Have a nice day" % user_name)
-            sound.stop()
             break 
         else:
             continue
+    
+    sound.stop()
 ###
 ### execute the loop
 ###
