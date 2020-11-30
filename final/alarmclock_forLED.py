@@ -28,7 +28,7 @@ def draw_matrix(m):
                 if y == 5:
                     color = 3 # second color: yellow 
                 elif y == 11:
-                    color = 6 # thire color: skyblue
+                    color = 6 # third color: skyblue
                 LMD.set_pixel(y, x, color)
             else:
                 continue
@@ -143,7 +143,7 @@ def SelectSound():
         top = 5
         left = 27        
         arrayBlk = arrayNumDict[audio_sound]
-        updateScreen(arrayBlk, top, left) # (5, 27)에 1~3 출력
+        updateScreen(arrayBlk, top, left) # (5, 27) 1~3 print
         break
 
 def SelectVolume():
@@ -156,15 +156,15 @@ def SelectVolume():
             top = 11
             left = 25
             arrayBlk = arrayNumDict['Non']
-            updateScreen(arrayBlk, top, left) # (11, 25)에 빈 어레이 출력 (volume 2자리 -> 1자리 될때 초기화)
+            updateScreen(arrayBlk, top, left) # (11, 25) empty array print (reset array)
             left += 4 # (11, 29)
             if audio_volume == 10:
-                left = 25 # (11 ,25) volume == 10 일 때
+                left = 25 # (11 ,25)
         else:
             print("Out of input range. Please re-enter.")
             continue
 
-        for i in str(audio_volume): # volume 출력
+        for i in str(audio_volume): # volume print
             arrayBlk = arrayNumDict[int(i)]
             updateScreen(arrayBlk, top, left)
             left += 4
@@ -192,7 +192,7 @@ def Alarm():
     else:
         ap = "AM"
 
-    if aminute < 10: #출력할때 minute < 10 -> [][]:[0][]
+    if aminute < 10: # minute < 10 -> [][]:[0][]
         print_aminute = "0" + str(aminute)
         print_time = "%s:%s %s" % (ahour, print_aminute, ap)
         print("Alarm at {}".format(print_time))
@@ -204,13 +204,13 @@ def Alarm():
     if len(str(ahour))==1: # if ahour == 0 ~ 9
         left = 17
         arrayBlk = arrayNumDict['Non']
-        updateScreen(arrayBlk, top, left) # (0, 17)에 빈 공간 출력
+        updateScreen(arrayBlk, top, left) # (0, 17) empty array print
         left += 4
         arrayBlk = arrayNumDict[ahour]
-        updateScreen(arrayBlk, top, left) # (0, 21)에 ahour 출력
+        updateScreen(arrayBlk, top, left) # (0, 21) ahour print
     else: # ahour == 10 ~ 24
         left = 17 # (0, 17)
-        for num in str(ahour): # (0, 17), (0, 21)에 ahour 두자리 출력
+        for num in str(ahour): # (0, 17), (0, 21) ahour print
             arrayBlk = arrayNumDict[int(num)]
             updateScreen(arrayBlk, top, left)
             left += 4 
@@ -218,13 +218,13 @@ def Alarm():
     if len(str(aminute))==1: # if aminute == 0 ~ 9
         lst = [0, aminute]
         left = 25 # (0, 25)
-        for num in lst: # (0, 25), (0, 29)에 0, aminute 출력
+        for num in lst: # (0, 25), (0, 29) 0, aminute print
             arrayBlk = arrayNumDict[num]
             updateScreen(arrayBlk, top, left)
             left += 4
     else: # 10 ~ 60
         left = 25 # (0, 25)
-        for num in str(aminute): # (0, 25), (0, 29)에 aminute 두자리 출력
+        for num in str(aminute): # (0, 25), (0, 29) aminute print
             arrayBlk = arrayNumDict[int(num)]
             updateScreen(arrayBlk, top, left)
             left += 4
@@ -233,33 +233,33 @@ def Alarm():
 
     now = datetime.now()
     if now.hour > ahour:
-        alarmtime = datetime(now.year, now.month, (now.day + 1), ahour, aminute, 0) # 현재 시각 > 알람 시각 : 알람 날짜 = 현재 날짜+=1일
+        alarmtime = datetime(now.year, now.month, (now.day + 1), ahour, aminute, 0) # now.hour > alarmhour : alarmtime day = now.day += 1 
     else:
-        alarmtime = datetime(now.year, now.month, now.day, ahour, aminute, 0) # 현재 시각 <= 알람 시각 : 알람 날짜 = 현재 날짜
+        alarmtime = datetime(now.year, now.month, now.day, ahour, aminute, 0) # now.hour <= alarmhour : alarmtime day = now.day
 
-    time_gap=(alarmtime-now).seconds # alarmtime-now를 초로 바꿈
-    time.sleep(time_gap) # 그 초 동안 time sleep함.
+    time_gap=(alarmtime-now).seconds # change (alarmtime-now) to seconds
+    time.sleep(time_gap) # suspend a process during time_gap
 
     print("WAKE UP")
     while True:
         sound.play()
-        return_name = face_recognition() # face_reconition()에서 return해준 이름을 return_name에 넣음
+        return_name = face_recognition() 
         if user_name == return_name:
             print("%s, Have a nice day" % user_name)
-            break # 같으면 종료
+            break 
         else:
             continue
 ###
 ### execute the loop
 ###
 while True:
-    user_name = input("Please input user name(Jiho / Myungjin / Professor / Juhyung / Giljin): ")
+    user_name = input("Please input user name(Jiho / Myungjin / Professor / Juhyung / Giljin): ") # input User Name
     if user_name not in UserNameList:
         continue
     break
 
 while True:
-    print("1.Set alarm\t2.Set alarm tone\t3.Set alarm size\t4. Exit")
+    print("1.Set alarm\t2.Set alarm tone\t3.Set alarm size\t4. Exit") # Options
     choice = int(input("Please enter your number.(1~4): "))
     if choice == 1:
         Alarm()
