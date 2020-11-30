@@ -124,7 +124,7 @@ UserNameList = ("Myungjin", "Jiho", "Professor", "Juhyung", "Giljin") # Alarm Us
 SoundList = {                                                         # Alarm Sound
             1: ('Alarm signal', 'alarm.wav'), 
             2: ('Campfire', 'fire.wav'),
-            3: ('Boiling water', 'boiling.wav')
+            3: ('K-POP', 'alarm_pop.wav')
 }
 
 def SelectSound():
