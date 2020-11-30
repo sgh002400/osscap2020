@@ -121,7 +121,7 @@ sound = pygame.mixer.Sound('alarm.wav') #default audio sound
 audio_volume = 0.5 #default audio volume
 sound.set_volume(audio_volume)
 
-UserNameList = ("Myungjin", "Jiho", "Professor", "Juhyung", "Giljin") # Alarm Users
+UserNameList = ("Myungjin", "Juyoung", "Professor", "Juhyung", "Giljin") # Alarm Users
 SoundList = {                                                         # Alarm Sound
             1: ('K-pop 1', 'alarm_pop.wav'), 
             2: ('K-pop 2', 'alarm_pop2.wav'),
@@ -257,7 +257,7 @@ def Alarm():
 ### execute the loop
 ###
 while True:
-    user_name = input("Please input user name(Jiho / Myungjin / Professor / Juhyung / Giljin): ") # input User Name
+    user_name = input("Please input user name(Juyoung / Myungjin / Professor / Juhyung / Giljin): ") # input User Name
     if user_name not in UserNameList:
         continue
     break
