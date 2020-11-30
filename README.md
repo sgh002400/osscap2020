@@ -30,8 +30,6 @@
 
 - $git clone https://github.com/sgh002400/osscap2020.git
 
-- $cd final
-
 - $cd osscap2020
 
 - $cd final
