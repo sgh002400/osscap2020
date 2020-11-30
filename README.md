@@ -11,7 +11,7 @@
 ### Installing / 설치, 사용
 
 아래 사항들이 설치, 사용 되었습니다.
-- Open CV
+- Open CV (http://www.3demp.com/community/boardDetails.php?cbID=235)
 - Python3
 - Pygame
 - opencv-python
