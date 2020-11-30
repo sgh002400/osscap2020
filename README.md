@@ -20,7 +20,11 @@
 
 
 ### Running the tests / 테스트의 실행
--구체적인 실행 안내                 
+-구체적인 실행 안내
+
+- $git clone https://github.com/sgh002400/osscap2020.git
+
+- $cd final
 
 - $python3 01_face_dataset.py
 > 01_face_dataset.py를 실행시켜서 id를 입력한다. 교수님은 3번, 주영 조교님은 4번, 길진 조교님은 5번이다. 숫자를 입력하고 카메라에 얼굴을 대고있으면 OpenCV의 haarcascades가 카메라를 통해 사용자 얼굴을 인식하여 img파일로 저장한다. 이때 카메라 화면은 뜨지 않으며 얼굴이 인식되어 저장된 이미지만 뜨게된다. 이 이미지를 통해 학습시켜야 하므로 우리는 30장을 저장시킵니다.
