@@ -118,19 +118,19 @@ draw_matrix(oScreen); print()
 
 pygame.mixer.init()
 audio_volume = 0.5 #default audio volume
-sound = pygame.mixer.Sound('alarm.wav')
+sound = pygame.mixer.Sound('alarm.wav') #default audio sound
 
 UserNameList = ("Myungjin", "Jiho", "Professor", "Juhyung", "Giljin") # Alarm Users
 SoundList = {                                                         # Alarm Sound
-            1: ('Alarm signal', 'alarm.wav'), 
-            2: ('K-pop', 'alarm_pop.wav'),
-            3: ('Boiling water', 'boiling.wav')
+            1: ('K-pop 1', 'alarm_pop.wav'), 
+            2: ('K-pop 2', 'alarm_pop2.wav'),
+            3: ('Miliatary', 'miliatary.wav')
 }
 
 def SelectSound():
     global sound
     while True: 
-        print("1. Alarm signal\n2. K-pop\n3. Boiling water")
+        print("1. K-pop 1\n2. K-pop 2\n3. Miliatary")
         audio_sound = int(input("Select the alarm sound(1~3): "))
         if 1 <= audio_sound <= 3:
             sound = pygame.mixer.Sound(SoundList[audio_sound][1])
