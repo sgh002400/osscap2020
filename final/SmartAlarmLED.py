@@ -241,16 +241,17 @@ def Alarm():
     time.sleep(time_gap) # suspend a process during time_gap
 
     print("WAKE UP")
+    sound.play(-1)
     while True:
-        sound.play()
         return_name = face_recognition() 
         if user_name == return_name:
             print("%s, Have a nice day" % user_name)
+            sound.stop()
             break 
         else:
             continue
         
-    sound.stop()
+    
 ###
 ### execute the loop
 ###
