@@ -123,14 +123,14 @@ sound = pygame.mixer.Sound('alarm.wav')
 UserNameList = ("Myungjin", "Jiho", "Professor", "Juhyung", "Giljin") # Alarm Users
 SoundList = {                                                         # Alarm Sound
             1: ('Alarm signal', 'alarm.wav'), 
-            2: ('Campfire', 'fire.wav'),
-            3: ('K-POP', 'alarm_pop.wav')
+            2: ('K-pop', 'alarm_pop.wav'),
+            3: ('Boiling water', 'boiling.wav')
 }
 
 def SelectSound():
     global sound
     while True: 
-        print("1. Alarm signal\n2. Campfire\n3. K-POP")
+        print("1. Alarm signal\n2. K-pop\n3. Boiling water")
         audio_sound = int(input("Select the alarm sound(1~3): "))
         if 1 <= audio_sound <= 3:
             sound = pygame.mixer.Sound(SoundList[audio_sound][1])
@@ -249,7 +249,7 @@ def Alarm():
             break 
         else:
             continue
-    
+        
     sound.stop()
 ###
 ### execute the loop
