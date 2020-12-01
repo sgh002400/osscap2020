@@ -45,7 +45,7 @@ $ cd osscap2020/final
 ```
 $ python3 01_face_dataset.py
 ```
->   >enter user id end press <return> ==>     
+> enter user id end press <return> ==>     
   숫자 id를 입력하고 카메라에 얼굴을 대고있으면 OpenCV의 haarcascades가 카메라를 통해 사용자 얼굴을 인식하여 카메라 화면을 캡쳐하고 이를 dataset directory에 jpg파일로 저장한다.   
   인식의 정확도를 높이기 위해 얼굴과 카메라의 거리나 각도를 약간씩 움직이면서 30장을 찍는다. id 1, 2는 이미 표본이 존재하므로 3부터 입력을 권장한다.
 
