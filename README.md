@@ -69,7 +69,7 @@ $ python3 SmartAlarmLED.py
      시간범위를 초과한 정수를 넣으면 다시 입력해야한다.    
      알람이 울림과 동시에 카메라가 켜지며, 얼굴이 인식될 때까지 알람이 울리게된다.    
      알람이 울리기전에 입력해둔 사용자의 이름(user_name)과 face_recognition함수에서 인식된 얼굴의 이름(return_name)이 일치하면 ESC를 눌렀을 때 알람이 꺼진다.   
-     만약 user_name != return_name -> ESC를 누르면 카메라는 다시작동되고 알람도 계속 울린다.
+     만약 일치하지않으면 ESC를 눌러도 카메라 다시작동되고 알람도 계속 울린다.
 
 -    2 (Set alarm tone)   
 
