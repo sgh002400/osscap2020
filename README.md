@@ -11,37 +11,52 @@
 ### Installing / 설치, 사용
 
 - Open CV (http://www.3demp.com/community/boardDetails.php?cbID=235)
-- Python3
-- Pygame
 - opencv-python
 - Numpy
 - os
 - Pi-camera (https://blog.naver.com/ljy9378/221431122137)
 - 3.5mm speaker
+- Pygame
+```
+$ sudo apt install python3-pip
+$ pip3 install pygame
+```
 
 ### Running the tests / 테스트의 실행
 -구체적인 실행 안내
 
-- $sudo raspi-config
+```
+$ sudo raspi-config
+```
 1. System Options -> S2 Audio -> 1 Headphones
 > 외장 스피커를 사용하므로 raspi 초기설정을 위와 같이 해줘야한다.
 
 2. Camera -> enabled 
 > 카메라 연결하는 것부터 찍기 시작한다. 첫번째는 잘 작동되지만, 두번째 시도 떄 Assertion failed 오류가 뜬다면 sudo modprobe bcm2835-v4l2를 입력하고, sudo nano /etc/modules를 입력한 후 맨 마지막 줄에 bcm2835-v4l2를 입력한 후 저장한다.
 
-- $ git clone https://github.com/sgh002400/osscap2020.git
+```
+$ git clone https://github.com/sgh002400/osscap2020.git
+```
 
-- $ cd osscap2020/final
+```
+$ cd osscap2020/final
+```
 
-- $ python3 01_face_dataset.py
+```
+$ python3 01_face_dataset.py
+```
 >   >enter user id end press <return> ==>     
   숫자 id를 입력하고 카메라에 얼굴을 대고있으면 OpenCV의 haarcascades가 카메라를 통해 사용자 얼굴을 인식하여 카메라 화면을 캡쳐하고 이를 dataset directory에 jpg파일로 저장한다.   
   인식의 정확도를 높이기 위해 얼굴과 카메라의 거리나 각도를 약간씩 움직이면서 30장을 찍는다. id 1, 2는 이미 표본이 존재하므로 3부터 입력을 권장한다.
 
-- $ python3 02_face_training.py
+```
+$ python3 02_face_training.py
+```
 >  dataset directory의 jpg 파일들을 불러와 학습시킨 후 결과를 trainer directory에 trainer.yml 파일로 저장시킨다.
 
-- $ python3 SmartAlarmLED.py
+```
+$ python3 SmartAlarmLED.py
+```
 >    Please input user name(Juyoung / Myungjin / Professor / Juhyung / Giljin):      
   사용자 이름을 괄호에 나와있는 철자로 입력한다.  
   
