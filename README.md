@@ -42,13 +42,13 @@
 >  dataset directory의 jpg 파일들을 불러와 학습시킨 후 결과를 trainer directory에 trainer.yml 파일로 저장시킨다.
 
 - $ python3 SmartAlarmLED.py
->   > Please input user name(Juyoung / Myungjin / Professor / Juhyung / Giljin):      
+>    Please input user name(Juyoung / Myungjin / Professor / Juhyung / Giljin):      
   사용자 이름을 괄호에 나와있는 철자로 입력한다.  
   
->   > 1.Set alarm   2.Set alarm tone  3.Set alarm size   4. Exit      
+>    1.Set alarm   2.Set alarm tone  3.Set alarm size   4. Exit      
   1.알람시간 설정, 2.알람노래 설정, 3.알람크기 설정, 4.종료
 
->   > 1 (Set alarm):    
+>    1 (Set alarm):    
      HOUR (24 hour time): 0에서 24 사이의 정수를 입력한다.      
      MINUTE : 0에서 60 사이의 정수를 입력한다. (0에서 9일 경우 앞에 0을 붙이면 안된다)      
      시간범위를 초과한 정수를 넣으면 다시 입력해야한다. 알람시간을 설정하면 LED Matrix에 출력된다.   
@@ -56,16 +56,16 @@
       알람이 울리기전에 입력해둔 사용자의 이름(user_name)과 face_recognition함수에서 인식된 얼굴의 이름(return_name)이 일치하면 ESC를 눌렀을 때 알람이 꺼진다.   
       만약 user_name != return_name -> ESC를 누르면 카메라는 다시작동되고 알람도 계속 울린다.
 
->   > 2 (Set alarm tone):   
+>    2 (Set alarm tone):   
       1. K-pop 1  2. K-pop 2  3. Miliatary   
       Select the alarm sound:   
       알람음을 1~3 사이의 정수로 입력한다.
     
->   > 3 (Set alarm size):   
+>    3 (Set alarm size):   
       Please enter the size of the alarm:   
       알람음의 크기를 0~10사이의 정수로 입력한다.
 
->   > 4 (Exit):   
+>    4 (Exit):   
       스마트알람프로그램을 종료시킨다.
 
 ### Note / 시연시 참고사항
