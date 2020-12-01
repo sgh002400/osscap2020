@@ -240,7 +240,7 @@ def Alarm():
         alarmtime = datetime(now.year, now.month, now.day, ahour, aminute, 0) # now.hour <= alarmhour : alarmtime day = now.day
 
     time_gap=(alarmtime-now).seconds # change (alarmtime-now) to seconds
-    time.sleep(time_gap) # suspend a process during time_gap
+    time.sleep(time_gap - 1) # suspend a process during time_gap
 
     print("WAKE UP")
     sound.play(-1)
