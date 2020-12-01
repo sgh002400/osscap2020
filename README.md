@@ -4,7 +4,7 @@
 
 #### 간단한 실행 안내
 1. 프로그램 실행 순서는 01_face_dataset.py, 02_face_training.py, SmartAlarmLED.py를 순서대로 실행시켜야한다. 
-2. 01_face_dataset.py로 자신의 번호를 입력한 뒤 카메라를 응시하여 얼굴 데이터(jpg)를 흑백사진으로 저장한다.
+2. 01_face_dataset.py로 자신의 번호를 입력한 뒤 카메라를 응시하여 얼굴 데이터를 jpg파일로 저장한다.
 3. 02_face_training.py로 위 이미지를 학습시킨다. 
 4. SmartAlarmLED.py에선 알람시계기능과 LED Matrix에 UI를 띄우는 역할을 한다. 이후 알람시간이 되면 얼굴이 인식된 후 ESC를 누를때까지 알람이 울리게 만들었다.
 
@@ -32,7 +32,7 @@ $ sudo raspi-config
 > 외장 스피커를 사용하므로 raspi 초기설정을 위와 같이 해줘야한다.
 
 2. Camera -> enabled 
-> 카메라 연결하는 것부터 찍기 시작한다. 첫번째는 잘 작동되지만, 두번째 시도 떄 Assertion failed 오류가 뜬다면 sudo modprobe bcm2835-v4l2를 입력하고, sudo nano /etc/modules를 입력한 후 맨 마지막 줄에 bcm2835-v4l2를 입력한 후 저장한다.
+> 카메라 작동시에 첫번째는 잘 작동되지만, 두번째 시도 떄 Assertion failed 오류가 뜬다면 ``` $ sudo modprobe bcm2835-v4l2 ```를 입력하고 ``` $ sudo nano /etc/modules ```를 입력한 후 해당 파일 내의 맨 마지막 줄에 bcm2835-v4l2를 입력한 후 저장하면 해결 된다.
 
 ```
 $ git clone https://github.com/sgh002400/osscap2020.git
